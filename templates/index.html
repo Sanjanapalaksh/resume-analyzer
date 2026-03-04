@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume Analyzer</title>
+</head>
+<body>
+    <h1>Resume Analyzer</h1>
+
+    <form method="POST" enctype="multipart/form-data">
+        <label>Upload Resume (PDF):</label><br><br>
+        <input type="file" name="resume" required><br><br>
+
+        <label>Paste Job Description:</label><br><br>
+        <textarea name="job_description" rows="10" cols="50" required></textarea><br><br>
+
+        <button type="submit">Analyze</button>
+    </form>
+
+    {% if score is not none %}
+        <h2>Match Score: {{ score }}%</h2>
+    {% endif %}
+
+</body>
+</html>
