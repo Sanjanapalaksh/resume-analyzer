@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkillMatch AI – Resume Analyzer</title> <!-- Custom tab title -->
+    
+    <!-- App Name for Browser Tab -->
+    <title>SkillMatch AI – Resume Analyzer</title>
+
+    <!-- SEO Description for Google -->
+    <meta name="description" content="SkillMatch AI is a free resume analyzer that matches your resume with job descriptions using AI-powered scoring. Upload your resume and see your job fit instantly.">
 
     <!-- Bootstrap CSS for modern UI -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -23,8 +28,10 @@
 </head>
 <body>
   <div class="container py-5">
+    <!-- App Heading -->
     <h1 class="text-center mb-4">SkillMatch AI – Resume Analyzer</h1>
 
+    <!-- Resume Upload Form -->
     <form method="POST" enctype="multipart/form-data" class="bg-white p-4 rounded shadow">
       <div class="mb-3">
         <label for="resume" class="form-label">Upload your Resume (PDF)</label>
@@ -37,6 +44,7 @@
       <button type="submit" class="btn btn-primary w-100">Check Match</button>
     </form>
 
+    <!-- Display Similarity Score with Colors -->
     {% if score %}
       {% if score >= 80 %}
         <div class="alert alert-success mt-4 text-center">
