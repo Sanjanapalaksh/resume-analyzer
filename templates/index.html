@@ -1,24 +1,78 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Resume Analyzer</title>
+    <title>SkillMatch AI 🚀</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            width: 50%;
+            margin: auto;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: #2c3e50;
+        }
+
+        textarea {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        input[type="file"] {
+            margin: 10px 0;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        .score {
+            margin-top: 20px;
+            font-size: 22px;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
 </head>
 <body>
-    <h1>Resume Analyzer</h1>
+
+<div class="container">
+    <h1>Resume Analyzer 🔍</h1>
 
     <form method="POST" enctype="multipart/form-data">
-        <label>Upload Resume (PDF):</label><br><br>
-        <input type="file" name="resume" required><br><br>
+        <input type="file" name="resume" required><br>
 
-        <label>Paste Job Description:</label><br><br>
-        <textarea name="job_description" rows="10" cols="50" required></textarea><br><br>
+        <textarea name="job_description" rows="8" placeholder="Paste Job Description Here..." required></textarea><br>
 
-        <button type="submit">Analyze</button>
+        <button type="submit">Analyze Resume</button>
     </form>
 
     {% if score is not none %}
-        <h2>Match Score: {{ score }}%</h2>
+        <div class="score">
+            Match Score: {{ score }}%
+        </div>
     {% endif %}
+</div>
 
 </body>
 </html>

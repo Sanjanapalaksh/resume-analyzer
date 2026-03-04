@@ -9,7 +9,9 @@ def extract_text_from_pdf(file):
     pdf_reader = PyPDF2.PdfReader(file)
     text = ""
     for page in pdf_reader.pages:
-        text += page.extract_text()
+        extracted = page.extract_text()
+        if extracted:
+            text += extracted
     return text
 
 def calculate_similarity(resume_text, job_desc):
@@ -25,7 +27,11 @@ def index():
         file = request.files['resume']
         job_desc = request.form['job_description']
         resume_text = extract_text_from_pdf(file)
-        similarity_score = calculate_similarity(resume_text, job_desc)
+
+        if not resume_text:
+            similarity_score = 0
+        else:
+            similarity_score = calculate_similarity(resume_text, job_desc)
 
     return render_template('index.html', score=similarity_score)
 
