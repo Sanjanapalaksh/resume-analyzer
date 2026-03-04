@@ -1,6 +1,6 @@
 # SkillMatch AI – Resume Analyzer
 
-**Live Demo:** [https://resume-analyzer.onrender.com](https://resume-analyzer.onrender.com)
+**Live Demo:** [https://resume-analyzer-3i7e.onrender.com]
 
 SkillMatch AI is a free, AI-powered resume analyzer that matches your resume with job descriptions. Upload your resume and instantly see how well you fit the job using a percentage similarity score. Colored results indicate match strength:
 
