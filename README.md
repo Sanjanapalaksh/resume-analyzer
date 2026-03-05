@@ -21,4 +21,4 @@ SkillMatch AI is a free, AI-powered resume analyzer that matches your resume wit
 
 ---
 
-## Project Structure
+
